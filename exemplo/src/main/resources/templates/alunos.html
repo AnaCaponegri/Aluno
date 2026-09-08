@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Informa que utilizaremos funcionalidades do Thymeleaf -->
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <h1>Lista de Alunos</h1> 
+      <a th:href="@{/alunos/novo}">
+        Cadastrar novo aluno
+    </a>
+    <!--
+        th:each funciona como uma repetição.
+
+        Para cada aluno existente na lista "alunos",
+        criaremos uma linha da tabela.
+    -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Curso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="aluno : ${alunos}">
+                <td th:text="${aluno.nome}">
+                    Nome
+                </td>
+                <td th:text="${aluno.idade}">
+                    Idade
+                </td>
+                <td th:text="${aluno.curso}">
+                    Curso
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

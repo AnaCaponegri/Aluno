@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Aluno</title>
+</head>
+<body>
+    <h1>Cadastrar Aluno</h1>
+    <!--
+        O formulário enviará os dados para:
+        POST /alunos
+        th:object indica qual objeto
+        estamos preenchendo.
+    -->
+    <form th:action="@{/alunos}" th:object="${aluno}" method="post">
+        <!-- NOME -->
+        <div>
+            <label>Nome:</label>
+            <input type="text" th:field="*{nome}">
+        </div>
+        <br>
+        <!-- IDADE -->
+        <div>
+            <label>Idade:</label>
+            <input type="number" th:field="*{idade}">
+        </div>
+        <br>
+        <!-- CURSO -->
+        <div>
+            <label>Curso:</label>
+            <input type="text" th:field="*{curso}">
+        </div>
+        <br>
+        <!-- BOTÃO -->
+
+        <button type="submit">
+            Cadastrar
+        </button>
+
+    </form>
+    <br>
+    <a th:href="@{/alunos}">
+        Voltar para a lista
+    </a>
+</body>
+
+</html>

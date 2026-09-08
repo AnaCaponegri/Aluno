@@ -1,0 +1,63 @@
+ADICIONANDO O CSS
+Criar arquivo stylo.css em src/main/resources/static/css/
+
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f4;
+}
+
+/* Títulos */
+h1 {
+    color: #333;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/* Cabeçalho e células */
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Cabeçalho */
+th {
+    background-color: #333;
+    color: white;
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+/* Formulário */
+form {
+    background-color: white;
+    padding: 20px;
+    max-width: 500px;
+}
+
+/* Campos */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Botão */
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
